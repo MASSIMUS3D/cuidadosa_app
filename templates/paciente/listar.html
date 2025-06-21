@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+  <h2>Pacientes</h2>
+  <a href="{% url 'criar_paciente' %}" class="btn btn-primary mb-3">+ Novo Paciente</a>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Data de Nascimento</th>
+        <th>Telefone</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for paciente in pacientes %}
+      <tr>
+        <td>{{ paciente.nome }}</td>
+        <td>{{ paciente.data_nascimento }}</td>
+        <td>{{ paciente.telefone }}</td>
+        <td>
+          <a href="{% url 'editar_paciente' paciente.id %}" class="btn btn-sm btn-warning">Editar</a>
+          <a href="{% url 'excluir_paciente' paciente.id %}" class="btn btn-sm btn-danger">Excluir</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

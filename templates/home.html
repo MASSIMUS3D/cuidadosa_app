@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="icon" href="{% static 'favicon.png' %}" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeCare App - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f4f8;
+    }
+    .navbar {
+      background-color: #0069d9;
+    }
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-body {
+      flex-grow: 1;
+    }
+    .card a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .card:hover {
+      transform: scale(1.02);
+      transition: 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <span class="navbar-brand">HomeCare App</span>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h2 class="mb-4 text-center">Bem-vindo ao Sistema HomeCare App</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <div class="col">
+        <div class="card shadow-sm p-3">
+          <a href="/paciente/">
+            <div class="card-body">
+              <h5 class="card-title">👤 Paciente</h5>
+              <p class="card-text">Gerencie informações dos pacientes.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm p-3">
+          <a href="/medicacao/">
+            <div class="card-body">
+              <h5 class="card-title">💊 Medicação</h5>
+              <p class="card-text">Controle os medicamentos administrados.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm p-3">
+          <a href="/alimentacao/">
+            <div class="card-body">
+              <h5 class="card-title">🍽️ Alimentação</h5>
+              <p class="card-text">Registre as refeições e nutrição.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm p-3">
+          <a href="/higiene/">
+            <div class="card-body">
+              <h5 class="card-title">🛁 Higiene</h5>
+              <p class="card-text">Controle de higiene diária dos pacientes.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm p-3">
+          <a href="/traqueostomia/">
+            <div class="card-body">
+              <h5 class="card-title">🫁 Traqueostomia</h5>
+              <p class="card-text">Acompanhamento de cuidados com traqueostomia.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm p-3">
+          <a href="/sinaisvitais/">
+            <div class="card-body">
+              <h5 class="card-title">❤️ Sinais Vitais</h5>
+              <p class="card-text">Registro de pressão, temperatura, etc.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm p-3">
+          <a href="/agenda/">
+            <div class="card-body">
+              <h5 class="card-title">📅 Agenda</h5>
+              <p class="card-text">Visualize e organize os atendimentos.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
